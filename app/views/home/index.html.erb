@@ -1,0 +1,92 @@
+<script type="text/javascript">
+    var isAutorised = <%= @authorised %>;
+</script>
+<script type="text/template" id="login-template">
+    <div class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <div class="control-group">
+            <input type="text" class="input-block-level required" placeholder="Username" name="username"/>
+        </div>
+        <div class="control-group">
+            <input type="password" class="input-block-level required" placeholder="Password" name="password"/>
+        </div>
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+    </div>
+</script>
+<script type="text/template" id="msgs-alert">
+    <div class="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Warning!</strong> <%%= message %></strong>
+    </div>
+</script>
+<script type="text/template" id="msgs-error">
+    <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Warning!</strong> <%%= message %></strong>
+    </div>
+</script>
+<script type="text/template" id="msgs-success">
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Warning!</strong> <%%= message %></strong>
+    </div>
+</script>
+<script type="text/template" id="projects-heading">
+    <div class="row-fluid show-grid <%%= class_xtra %>" id="prjid_<%%= pid %>">
+        <div class="span12">
+            <h4><%%= name %><a class="icon-plus new-issue"></a></h4>
+            <ul class="row-fluid show-grid">
+                <li>
+                    <div class="issues"><%%= issues %></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="issue-part">
+    <div class="span4">
+        <a href="<%= @redmine_base_url %>/issues/<%%= id %>" target="_blank">
+            <%%= name %>
+        </a>
+        <div>
+            <textarea rows="3"><%%= description %></textarea>
+            <div>
+                <button type="submit" class="btn">Save</button>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="menu-template">
+    <div class="navbar navbar-inner">
+        <ul class="nav">
+            <li><a href="#weeklyStatusUpdate">Weekly status updates</a></li>
+        </ul>
+        <div class="btn-group pull-right">&nbsp;</div>
+        <div class="btn-group pull-right">
+            <a class="btn btn-primary">
+                <i class="icon-user icon-white"></i>
+                <%%= userinfo_big %> [<%%= userinfo_small %>]
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a id="action-logout" href="#">Logout</a></li>
+            </ul>
+        </div>
+        <div class="btn-group pull-right">
+            <a class="btn btn dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-filter icon"></i>Projects<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu project-selector">
+                <li><a href="#weeklyStatusUpdate">All</a></li>
+            </ul>
+        </div>
+    </div>
+</script>
+<div id="container-fluid">
+    <div id="messages-pane"></div>
+    <div id="login-pane"></div>
+    <div id="app-pane"></div>
+</div>

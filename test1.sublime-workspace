@@ -1,0 +1,673 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"jQUery",
+				"jQuery.ajax	jQuery.ajax"
+			],
+			[
+				"jQuery",
+				"jQuery.each	jQuery.each"
+			],
+			[
+				"jQuer",
+				"jQuery.each	jQuery.each"
+			],
+			[
+				"issueCollection",
+				"issueCollectionModel"
+			],
+			[
+				"issueCollecti",
+				"issueCollectionModel"
+			],
+			[
+				"jQu",
+				"jQuery.each	jQuery.each"
+			],
+			[
+				"jQ",
+				"jQuery.each	jQuery.each"
+			],
+			[
+				"Project",
+				"Project"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"use",
+				"user"
+			],
+			[
+				"con",
+				"conf_"
+			],
+			[
+				"url",
+				"urlParsed"
+			],
+			[
+				"conta",
+				"contact_us"
+			],
+			[
+				"ar",
+				"argument"
+			],
+			[
+				"apartment",
+				"apartment_type"
+			],
+			[
+				"jQer",
+				"jQuery"
+			],
+			[
+				"se",
+				"sendmail_result"
+			],
+			[
+				"erro",
+				"error_msg"
+			],
+			[
+				"error",
+				"error_code"
+			],
+			[
+				"err",
+				"error_code"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"so",
+				"solid"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"meta",
+				"meta_apartments_title"
+			],
+			[
+				"form",
+				"form1"
+			],
+			[
+				"j",
+				"jquery	<script> (code.jquery.com)"
+			],
+			[
+				"h",
+				"hover"
+			],
+			[
+				"a",
+				"active"
+			],
+			[
+				"st",
+				"static_pages"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-decoration"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 96.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Format: Javascript"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"brak",
+				"Bracket Highlighter: Fold by Brackets"
+			],
+			[
+				"brack",
+				"Bracket Highlighter: Toggle Bracket String Escape Mode"
+			],
+			[
+				"bra",
+				"Bracket Highlighter: Select Tag"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Enable Package"
+			],
+			[
+				"pa",
+				"Package Control: Upgrade/Overwrite All Packages"
+			]
+		],
+		"width": 494.0
+	},
+	"console":
+	{
+		"height": 314.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/zetxx/phantomJs/phantomjs-1.8.1-linux-x86_64/examples/arguments.js",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/app.js",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/stylesheets/main.css",
+		"/home/zetxx/ruby/rails/www/test1/app/controllers/application_controller.rb",
+		"/home/zetxx/ruby/rails/www/test1/app/controllers/home_controller.rb",
+		"/home/zetxx/ruby/rails/www/test1/app/views/home/index.html.erb",
+		"/home/zetxx/ruby/rails/www/test1/config/routes.rb",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_96b5aa9f3f0958794612641b7d6b4893",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_655a997f9226fc5fda544a29aa98050c",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_825bdfe494cdd5baef5ea53d42c88b03",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_8476b70ce109f574bb07409b15996d10",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_a42dc877b07234f772c1f7abcb7270c5",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_b25e157b2cadeccb3051a53a89735827",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_be6dc882fee389c3cba3129602002dc6",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_d825eab813e5b51e430b1f6341fb3c8b",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_d63076d4251d36e7b018e1c1943700c6",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_de7691c30793bdc1535e5d01766c996e",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_f3af8e9834ce72b0459a0cfdefd19481",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/backups/ux31/sql-help/SQLQuery1.sql",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/backups/ux31/1.rb",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/backups/ux31/class Newserver.rb",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/backups/ux31/factura.txt",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/tmp/elin/test.sql",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/tmp/elin/w7/desktop/New Text Document.txt",
+		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/tmp/belogradchik observatory/New Notepad++ Document.txt",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/login.js",
+		"/home/zetxx/ruby/rails/www/test1/config/config.yml",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/sc2.js",
+		"/home/zetxx/ruby/rails/www/test1/app/views/layouts/application.html.erb",
+		"/home/zetxx/ruby/rails/www/test1/test1.sublime-project",
+		"/home/zetxx/ruby/rails/www/redmine/config/database.yml",
+		"/home/zetxx/Desktop/heroku.commit.txt",
+		"/home/zetxx/ruby/rails/www/redmine/Gemfile",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/locales/en.yml",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/hub_mailer/contactus.txt.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/static_pages/contact_us.html.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/static_pages/home.html.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/static_pages/send_contacts_mail.json.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/static_pages/apartments.html.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/layouts/application.html.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/javascripts/application.js",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/routes.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/stylesheets/application.css",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/config.yml",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/application.rb",
+		"/home/zetxx/Desktop/actions.js",
+		"/home/zetxx/.config/sublime-text-2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/home/zetxx/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/zetxx/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
+		"/home/zetxx/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/zetxx/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/zetxx/.config/sublime-text-2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/home/zetxx/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-mousemap",
+		"/home/zetxx/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/zetxx/.config/sublime-text-2/Packages/User/JavaScript.sublime-settings",
+		"/home/zetxx/Desktop/get-third-party-deps",
+		"/home/zetxx/.config/sublime-text-2/Packages/User/sftp_servers/home-ws",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/controllers/static_pages_controller.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/mailers/hub_mailer.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/environments/production.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/.sass-cache/7b60e9ff646e6a8a4dfe749608be44e1869a5632/static_pages.css.scssc",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/hub_mailer/contactus.html.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/initializers/recaptcha.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/Gemfile",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/environment.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/environments/test.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/static_pages/send_contacts_mail.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/static_pages/send_contacts_mail.erb.json",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/controllers/application_controller.rb",
+		"/home/zetxx/Desktop/vbox_shared_folder/Softwaregroup/utswitch/htdocs/UnderTreeWeb/impl/UTMirrors/models/savix.json",
+		"/home/zetxx/Desktop/vbox_shared_folder/Softwaregroup/utswitch/htdocs/UnderTreeWeb/impl/UTMirrors/models/nbv.json",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/views/hub_mailer/contactus.json.erb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/javascripts/static_pages.js.coffee",
+		"/home/zetxx/.config/sublime-text-2/Packages/BracketHighlighter/Default (Linux).sublime-keymap",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/javascripts/jquery.jqtransform.js",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/initializers/wrap_parameters.rb",
+		"/home/zetxx/.ssh/known_hosts",
+		"/home/zetxx/www/thehubvanuatu.com/contactus.html",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/stylesheets/static_pages.css.scss",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/stylesheets/lightbox.css",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/javascripts/lightbox.js",
+		"/home/zetxx/www/thehubvanuatu.com/index.html",
+		"/home/zetxx/www/thehubvanuatu.com/apartments.html",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/spec/requests/static_pages_spec.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/helpers/static_pages_helper.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/initializers/session_store.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/initializers/secret_token.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/initializers/mime_types.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/initializers/inflections.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/initializers/backtrace_silencers.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/script/rails",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/environments/development.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/boot.rb",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config.ru",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/javascripts/script.js",
+		"/home/zetxx/www/thehubvanuatu.com/js/script.js",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/app/assets/images/rails.png",
+		"/home/zetxx/ruby/rails/www/vanuatuhub/config/database.yml",
+		"/home/zetxx/ruby/rails/www/sample_app/README.md",
+		"/home/zetxx/ruby/rails/www/sample_app/app/controllers/application_controller.rb",
+		"/home/zetxx/ruby/rails/www/sample_app/public/index.html",
+		"/home/zetxx/.config/sublime-text-2/Packages/RubyTest/README.md",
+		"/home/zetxx/.config/sublime-text-2/Packages/RailsTutorial/README.md",
+		"/home/zetxx/ruby/rails/www/sample_app/spec/requests/static_pages_spec.rb",
+		"/home/zetxx/.config/sublime-text-2/Packages/Batch File/Batch File.tmLanguage",
+		"/home/zetxx/.bash_profile",
+		"/home/zetxx/.zshenv",
+		"/home/zetxx/.profile",
+		"/home/zetxx/.goutputstream-EYMXJW",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Default (Linux).sublime-keymap",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Shell Turtlestein.sublime-settings",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/shell_turtlestein.py",
+		"/home/zetxx/.config/sublime-text-2/Packages/ShellScript/elif-..-(elif).sublime-snippet",
+		"/home/zetxx/.config/sublime-text-2/Packages/ShellScript/#!-usr-bin-env-(!env).sublime-snippet",
+		"/home/zetxx/.config/sublime-text-2/Packages/ShellScript/Shell-Unix-Generic.tmLanguage.cache",
+		"/home/zetxx/.config/sublime-text-2/Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Default (OSX).sublime-keymap",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Default (Windows).sublime-keymap",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/LICENSE",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/package-metadata.json",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/README.md",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/shell_turtlestein.pyc",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Default.sublime-keymap",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Shell Turtlestein (Windows).sublime-settings",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/sublime_readline.py",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/sublime_readline.pyc",
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/.gitignore",
+		"/home/zetxx/www/thehubvanuatu.com/css/style.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"weeklyStatusUpdate",
+			"issueCollection",
+			"match",
+			"pane",
+			"app",
+			"doLogin",
+			"port",
+			"host",
+			"password",
+			"username",
+			"\"---\"",
+			"content_",
+			"<br",
+			"ctrl+shift",
+			"shift+c",
+			"vsla",
+			" '",
+			"mail",
+			"form",
+			"config",
+			"#form1 .button1 {float:right;margin-left:4px;padding:0 19px}",
+			"select.",
+			"kwicks",
+			"../images/lightbox/",
+			"application",
+			"kwicks",
+			"<br>",
+			"container",
+			"images",
+			"\n",
+			"\"><",
+			"active",
+			"\n                ",
+			"\n  describe \"home\" do\n    it \"noting to test still\" do\n      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers\n      visit '/'\n      response.status.should be(200)\n    end\n  end",
+			"args",
+			"gal7",
+			"<li>\n                                                <a target=\"_blank\" href=\"images/gal7.jpg\" rel=\"lightbox[roadtrip]\">\n                                                    <img src=\"images/tngal7.jpg\" alt=\"\" width=\"110\" height=\"120\" />\n                                                </a>\n                                            </li>",
+			"<li>\n                                                <a target=\"_blank\" href=\"images/gal6.jpg\" rel=\"lightbox[roadtrip]\">\n                                                    <img src=\"images/tngal6.jpg\" alt=\"\" width=\"110\" height=\"120\" />\n                                                </a>\n                                            </li>",
+			"menu",
+			"hover",
+			"form",
+			"640",
+			"\\\"[^\\n]+\\n",
+			"(\\{\\\"\\d+\\\"\\:\\\"[a-z\\.]+\\\"\\,\\\"\\d+\\\"\\:\\\")([^\\\"]+)",
+			"\\{\\\"\\d+\\\"\\:\\\"[a-z\\.]+\\\"\\,\\\"\\d+\\\"\\:\\\"([^\\\"]+)"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/assets/lightbox/",
+			"<br/>",
+			"",
+			"\\n$2\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.jslint_result_view":
+	{
+		"height": 112.0
+	},
+	"output.sftp":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"app.",
+				"app/assets/javascripts/app.js"
+			],
+			[
+				"appl",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"home",
+				"app/controllers/home_controller.rb"
+			],
+			[
+				"router",
+				"config/routes.rb"
+			],
+			[
+				"applicat",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				".css",
+				"app/assets/stylesheets/main.css"
+			],
+			[
+				"login",
+				"app/assets/javascripts/login.js"
+			],
+			[
+				"app",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"application",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"appli",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"en.y",
+				"config/locales/en.yml"
+			],
+			[
+				"en.",
+				"config/locales/en.yml"
+			],
+			[
+				"view/",
+				"app/views/static_pages/apartments.html.erb"
+			],
+			[
+				"mail",
+				"app/mailers/hub_mailer.rb"
+			],
+			[
+				"contactus",
+				"app/views/static_pages/contact_us.html.erb"
+			],
+			[
+				"conta",
+				"app/views/hub_mailer/contactus.html.erb"
+			],
+			[
+				"controll",
+				"app/controllers/static_pages_controller.rb"
+			],
+			[
+				"apartment",
+				"app/views/static_pages/apartments.html.erb"
+			],
+			[
+				"jquer",
+				"app/assets/javascripts/jquery.jqtransform.js"
+			],
+			[
+				"styl",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"style",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"rails",
+				"script/rails"
+			],
+			[
+				"config",
+				"config.ru"
+			],
+			[
+				"conf",
+				"config/application.rb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"r",
+				"config/routes.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"con",
+				"app/views/static_pages/contact_us.html.erb"
+			],
+			[
+				"hom",
+				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"aparment",
+				"app/views/static_pages/apartments.html.erb"
+			],
+			[
+				"rspe",
+				"spec/requests/static_pages_spec.rb"
+			],
+			[
+				"static_pages_spe",
+				"spec/requests/static_pages_spec.rb"
+			],
+			[
+				"data",
+				"config/database.yml"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"stat",
+				"app/controllers/static_pages_controller.rb"
+			],
+			[
+				"index",
+				"public/index.html"
+			],
+			[
+				"ups",
+				"spec/requests/static_pages_spec.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/zetxx/Desktop/projects/rails_sample_app.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 60.0,
+	"status_bar_visible": true
+}

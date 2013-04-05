@@ -1,0 +1,12 @@
+production:
+    host: 'support.softwaregroup-bg.com'
+    port: '443'
+    communication: 'https'
+    tracker: "Status update"
+    extraPath: "/redmine"
+development:
+    host: 'localhost'
+    port: '3000'
+    tracker: "test tracker"
+    communication: 'http'
+    extraPath: ""

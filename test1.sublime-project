@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/zetxx/ruby/rails/www/test1"
+		}
+	],
+    "settings":{
+        "browser-js-command":{
+            "match":{
+                //"url":"bb.js"
+                "title":"Test1"
+            }
+        }
+    }
+}
