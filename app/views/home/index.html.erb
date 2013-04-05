@@ -59,11 +59,26 @@
         </div>
     </div>
 </script>
+<script type="text/template" id="progress-bar">
+    <div class="row-fluid show-grid progress_holder">
+        <div class="span12">
+            <strong>12</strong></br>
+            <div class="progress progress-striped active">
+              <div class="bar" style="width: 0px;"></div>
+            </div>
+        </div>
+    </div>
+</script>
 <script type="text/template" id="menu-template">
     <div class="navbar navbar-inner">
-        <ul class="nav">
-            <li><a href="#weeklyStatusUpdate">Weekly status updates</a></li>
-        </ul>
+        <div class="btn-group pull-left">
+            <a class="btn btn dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-filter icon"></i>Projects<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu project-selector">
+                <li><a href="#weeklyStatusUpdate">All</a></li>
+            </ul>
+        </div>
         <div class="btn-group pull-right">&nbsp;</div>
         <div class="btn-group pull-right">
             <a class="btn btn-primary">
@@ -73,14 +88,6 @@
             </a>
             <ul class="dropdown-menu">
                 <li><a id="action-logout" href="#">Logout</a></li>
-            </ul>
-        </div>
-        <div class="btn-group pull-right">
-            <a class="btn btn dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-filter icon"></i>Projects<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu project-selector">
-                <li><a href="#weeklyStatusUpdate">All</a></li>
             </ul>
         </div>
     </div>

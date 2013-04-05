@@ -1,4 +1,37 @@
 function initPage(params){
+    var proccessCounter = {"i":0,"o":0};
+
+    function updateProcessCounter(direction) {
+        if(jQuery('#messages-pane .progress_holder').length == 0){//create progress
+            jQuery('#messages-pane').append(_.template($("#progress-bar").html(), {}));
+        }
+
+        if(direction == '+'){
+            proccessCounter.i++;
+        } else if(direction == '.') {
+            if(proccessCounter.i == (proccessCounter.o*-1)){
+                jQuery('#messages-pane .progress_holder').fadeTo(500,0.001,function() {
+                    this.remove();
+                    proccessCounter = {"i":0,"o":0};
+                });
+                return;//finish
+            }
+        } else {
+            proccessCounter.o--;
+        }
+        var rtext = (proccessCounter.o*-1) + ' / ' + proccessCounter.i;
+        var percentage = Math.round(((proccessCounter.o*-1)/proccessCounter.i)*100);
+
+        jQuery('#messages-pane .progress_holder .progress .bar').css({"width":percentage + '%'});
+        jQuery('#messages-pane .progress_holder strong').text(rtext);
+
+        if(proccessCounter.i == (proccessCounter.o*-1)){
+            setTimeout(function() {
+                updateProcessCounter('.');
+            },1000);
+        }
+    }
+
     $('#app-pane').append('<div class="mpane"></div>');
     $('#app-pane').append('<div class="mpane-main"></div>');
 
@@ -36,6 +69,7 @@ function initPage(params){
         },
         onDestroy:function() {},
         addAllProjects:function(where) {
+            updateProcessCounter('+');
             jQuery.ajax({
                 url: '/projects',
                 type: 'GET',
@@ -54,6 +88,7 @@ function initPage(params){
                             where.append(p);
                         }
                     });
+                    updateProcessCounter();
                 },
                 error: function(xhr, textStatus, errorThrown) {
                 }
@@ -73,6 +108,7 @@ function initPage(params){
     var Project = {
         "model":Backbone.Model.extend({
             "defaults":{
+                "IssueCollection":null,
                 "created_on": "",
                 "description": "",
                 "id": "",
@@ -95,7 +131,8 @@ function initPage(params){
             },
             newIssueView:function() {
                 //new issue window
-                alert('new issue window');
+                var newIssue = new Issue.model({"project_id":this.model.id});
+                this.model.attributes.IssueCollection.add(newIssue);
             },
             updateView:function () {
                 // model was changed, update the view
@@ -111,6 +148,7 @@ function initPage(params){
         "model":Backbone.Collection.extend({
             "model": Project.model,
             "url":function(args){
+                updateProcessCounter('+');
                 return '/projects'
             },
             parse:function(data) {
@@ -142,6 +180,7 @@ function initPage(params){
                     if(!parentList[val.id])
                         bottomLevel.push(val);
                 });
+                updateProcessCounter();
                 return bottomLevel;
             }
         }),
@@ -159,6 +198,7 @@ function initPage(params){
                     }).render();
                     //add issues
                     var issueCollectionModel = new IssueCollection.model();
+                    m.attributes.IssueCollection = issueCollectionModel;
                     var issueCollectionView = new IssueCollection.view({collection:issueCollectionModel, "htmlRoot":self.views[m.cid].$el.find('.issues')});
                     issueCollectionModel.setFetchParams({projectId:m.id});
                     issueCollectionModel.fetch();
@@ -186,16 +226,22 @@ function initPage(params){
     var Issue = {
         "model":Backbone.Model.extend({
             "defaults":{
-                "id":"",
-                "subject":"",
-                "description":""
+                "subject":(new Date()).toDateString(),
+                "description":"",
+                "project_id":0
             },
             update: function(up) {
                 if(up.attributes){
                     if(up.attributes.description)
                         this.attributes.description = up.attributes.description;
                 }
-                this.save();
+                var callBack = {};
+                if(this.isNew()){
+                    callBack = {"success":function(model, resp){
+                        model.id = model.attributes.id = resp.response.issue.id;
+                    }};
+                }
+                this.save({},callBack);
             }
         }),
         "view":Backbone.View.extend({
@@ -239,11 +285,11 @@ function initPage(params){
     var IssueCollection = {
         "model":Backbone.Collection.extend({
             "model": Issue.model,
-            "fetchParams":{},
             "setFetchParams":function(argument) {
                 this.fetchParams = argument;
             },
             "url":function(){
+                updateProcessCounter('+');
                 return '/project/' + this.fetchParams.projectId + '/issues'
             },
             parse:function(data) {
@@ -252,10 +298,11 @@ function initPage(params){
                     test.push({
                         "id":val.id,
                         "subject":val.subject,
+                        "project_id":val.project.id,
                         "description":val.description
                     });
                 });
-                // return data.response.issues;
+                updateProcessCounter();
                 return test;
             }
         }),
@@ -264,6 +311,7 @@ function initPage(params){
             "tagName":"ul",
             initialize : function() {
                 this.collection.bind('reset', this.render, this);
+                this.collection.bind('add', this.added, this);
             },
             render: function(params) {
                 var self = this;
@@ -275,6 +323,13 @@ function initPage(params){
                     }).render();
                 });
                 return this;
+            },
+            added:function(m) {
+                var self = this;
+                this.views[m.cid] = new Issue.view({
+                    model:m,
+                    htmlRoot:self.$el
+                }).render();
             }
         })
     };
@@ -288,7 +343,7 @@ function initPage(params){
                 "weeklyStatusUpdate": "weeklyStatusUpdate",
                 "weeklyStatusUpdate/:id": "weeklyStatusUpdate",
             },
-            weeklyStatusUpdate: function (query, page){//debugger;
+            weeklyStatusUpdate: function (query, page){
                 pageObject.onEventWeeklyStatusUpdate();
                 //add heading
                 $('#app-pane .mpane-main:last children').remove();

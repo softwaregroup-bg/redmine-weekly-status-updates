@@ -59,3 +59,5 @@ ul{list-style: none;}
     background-color: #ccc;
     margin-right: 2px;
 }
+#messages-pane .row-fluid.show-grid.progress_holder .span12{position: absolute;top: 0;height: 100%;z-index: 999;}
+#messages-pane .row-fluid.show-grid.progress_holder .span12{text-align: center;}

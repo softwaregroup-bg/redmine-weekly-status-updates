@@ -70,4 +70,25 @@ class HomeController < ApplicationController
 
         self.resReq('/issues/' + params["iid"].to_s + '.json','put',issueParam)
     end
+
+    def projectIssuesAdd
+        params["home"]["id"] = params["home"]["iid"]
+        paramsNew = {}
+        
+        params["home"].each do |x,v|
+            if x != 'iid' and x != 'id'
+                paramsNew[x] = v
+            end
+        end
+
+        issueParam = {}
+
+        issueParam['issue'] = paramsNew
+        issueParam['issue']['tracker_id'] = self.trackerId
+        print "\n--\n"
+        puts issueParam
+        print "\n--\n"
+        
+        self.resReq('/issues.json','post',issueParam)
+    end
 end
