@@ -1,4 +1,4 @@
-Run on every install in every `env`
+Run on every install for every `env`
 =================
 --
 * `rake db:sessions:create`
