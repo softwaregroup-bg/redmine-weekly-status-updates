@@ -1,13 +1,11 @@
 #!/bin/bash
 
 ### BEGIN INIT INFO
-# Provides: tuvocabulario.com
 # Required-Start: $all
 # Required-Stop: $network $local_fs $syslog
 # Default-Start: 2 3 4 5
 # Default-Stop: 0 1 6
 # Short-Description: Start the APPLICATION unicorns at boot
-# Description: Enable tuvocabulario.com at boot time.
 ### END INIT INFO
 
 set -u

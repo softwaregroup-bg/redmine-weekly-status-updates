@@ -1,5 +1,5 @@
 Run on every install for every `env`
 =================
 --
-* `rake db:sessions:create`
-* `rake db:migrate`
+* `RAILS_ENV=production rake db:sessions:create`
+* `RAILS_ENV=production rake db:migrate`
