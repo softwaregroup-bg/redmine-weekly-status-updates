@@ -91,4 +91,8 @@ class HomeController < ApplicationController
         
         self.resReq('/issues.json','post',issueParam)
     end
+
+    def issues
+        self.reqRes('/issues.json?include=journals&sort=created_on:desc&tracker_id=' + self.trackerId.to_s,self.username,self.password, '', 'render')
+    end
 end

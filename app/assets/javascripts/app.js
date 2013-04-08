@@ -291,18 +291,22 @@ function initPage(params){
             },
             "url":function(){
                 updateProcessCounter('+');
-                return '/project/' + this.fetchParams.projectId + '/issues'
+                return '/issues'
+                // return '/project/' + this.fetchParams.projectId + '/issues'
             },
             parse:function(data) {
-                var test = [];
+                var test = [],
+                    self = this;
                 if(data.response.issues){
                     jQuery.each(data.response.issues, function(index, val) {
-                        test.push({
-                            "id":val.id,
-                            "subject":val.subject,
-                            "project_id":val.project.id,
-                            "description":val.description
-                        });
+                        if((val.project.id == self.fetchParams.projectId) && (test.length < 2)){//if project id is the same as requested and total isses are < 2 per project
+                            test.push({
+                                "id":val.id,
+                                "subject":val.subject,
+                                "project_id":val.project.id,
+                                "description":val.description
+                            });
+                        }
                     });
                 }
                 updateProcessCounter();

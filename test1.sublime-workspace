@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"border-col",
+				"border-color"
+			],
+			[
+				"bor",
+				"border-collapse"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"para",
+				"paramsNew"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"sel",
+				"self"
+			],
+			[
+				"tra",
+				"tracker"
+			],
+			[
+				"project",
+				"projects"
+			],
+			[
 				"jQUery",
 				"jQuery.ajax	jQuery.ajax"
 			],
@@ -100,10 +136,6 @@
 				"solid"
 			],
 			[
-				"bor",
-				"border"
-			],
-			[
 				"meta",
 				"meta_apartments_title"
 			],
@@ -130,10 +162,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"text",
-				"text-decoration"
 			]
 		]
 	},
@@ -143,15 +171,15 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 96.0,
+		"height": 138.0,
 		"selected_items":
 		[
 			[
-				"install",
+				"insta",
 				"Package Control: Install Package"
 			],
 			[
-				"insta",
+				"install",
 				"Package Control: Install Package"
 			],
 			[
@@ -207,7 +235,7 @@
 				"Package Control: Upgrade/Overwrite All Packages"
 			]
 		],
-		"width": 494.0
+		"width": 521.0
 	},
 	"console":
 	{
@@ -224,13 +252,23 @@
 	},
 	"file_history":
 	[
-		"/home/zetxx/phantomJs/phantomjs-1.8.1-linux-x86_64/examples/arguments.js",
+		"/home/zetxx/Desktop/untitled.html",
+		"/home/zetxx/Desktop/test.css",
+		"/home/zetxx/ruby/rails/www/test1/app/views/home/index.html.erb",
 		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/app.js",
 		"/home/zetxx/ruby/rails/www/test1/app/assets/stylesheets/main.css",
-		"/home/zetxx/ruby/rails/www/test1/app/controllers/application_controller.rb",
 		"/home/zetxx/ruby/rails/www/test1/app/controllers/home_controller.rb",
-		"/home/zetxx/ruby/rails/www/test1/app/views/home/index.html.erb",
 		"/home/zetxx/ruby/rails/www/test1/config/routes.rb",
+		"/home/zetxx/ruby/rails/www/test1/app/controllers/application_controller.rb",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/issues.js",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/projects.js",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/projects",
+		"/home/zetxx/ruby/rails/www/test1/config/config.yml",
+		"/home/zetxx/ruby/rails/www/test1/.gitignore",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/stylesheets/bootstrap.min.css",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/stylesheets/bootstrap-responsive.min.css",
+		"/home/zetxx/ruby/rails/www/test1/app/assets/images/rails.png",
+		"/home/zetxx/phantomJs/phantomjs-1.8.1-linux-x86_64/examples/arguments.js",
 		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_96b5aa9f3f0958794612641b7d6b4893",
 		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_655a997f9226fc5fda544a29aa98050c",
 		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/tmp/sess_825bdfe494cdd5baef5ea53d42c88b03",
@@ -250,7 +288,6 @@
 		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/tmp/elin/w7/desktop/New Text Document.txt",
 		"/run/user/zetxx/gvfs/sftp:host=10.100.100.1,user=root/fs/raid/640/storage/tmp/belogradchik observatory/New Notepad++ Document.txt",
 		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/login.js",
-		"/home/zetxx/ruby/rails/www/test1/config/config.yml",
 		"/home/zetxx/ruby/rails/www/test1/app/assets/javascripts/sc2.js",
 		"/home/zetxx/ruby/rails/www/test1/app/views/layouts/application.html.erb",
 		"/home/zetxx/ruby/rails/www/test1/test1.sublime-project",
@@ -342,16 +379,7 @@
 		"/home/zetxx/.config/sublime-text-2/Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Default (OSX).sublime-keymap",
 		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Default (Windows).sublime-keymap",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/LICENSE",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/package-metadata.json",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/README.md",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/shell_turtlestein.pyc",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Default.sublime-keymap",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/Shell Turtlestein (Windows).sublime-settings",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/sublime_readline.py",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/sublime_readline.pyc",
-		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/.gitignore",
-		"/home/zetxx/www/thehubvanuatu.com/css/style.css"
+		"/home/zetxx/.config/sublime-text-2/Packages/Shell Turtlestein/LICENSE"
 	],
 	"find":
 	{
@@ -369,6 +397,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"t1",
+			"ajax",
+			"updateProcessCounter",
+			"proccessCounter",
+			"d",
+			"IssueCollection",
+			"==\\",
+			"pmaramsNew",
+			"projects",
+			"weeklyStatusUpdate",
+			"projects",
+			"onDestroy",
+			"icon",
+			"i",
+			"issue",
+			"/assets/images",
+			"/images",
+			"../img",
+			"img",
 			"weeklyStatusUpdate",
 			"issueCollection",
 			"match",
@@ -421,6 +468,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"/assets",
+			"/assets/images",
+			"../images",
 			"/assets/lightbox/",
 			"<br/>",
 			"",
@@ -494,11 +544,19 @@
 		"selected_items":
 		[
 			[
-				"app.",
-				"app/assets/javascripts/app.js"
+				"main.c",
+				"app/assets/stylesheets/main.css"
 			],
 			[
-				"appl",
+				"homeerb",
+				"app/views/home/index.html.erb"
+			],
+			[
+				"router",
+				"config/routes.rb"
+			],
+			[
+				"applicationcon",
 				"app/controllers/application_controller.rb"
 			],
 			[
@@ -506,8 +564,56 @@
 				"app/controllers/home_controller.rb"
 			],
 			[
-				"router",
+				"route",
 				"config/routes.rb"
+			],
+			[
+				"app.j",
+				"app/assets/javascripts/app.js"
+			],
+			[
+				"config",
+				"config/config.yml"
+			],
+			[
+				"applica",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"homeco",
+				"app/controllers/home_controller.rb"
+			],
+			[
+				"main",
+				"app/assets/stylesheets/main.css"
+			],
+			[
+				"app",
+				"app/assets/javascripts/app.js"
+			],
+			[
+				"applco",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"applia",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"actio",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"app.",
+				"app/assets/javascripts/app.js"
+			],
+			[
+				"appl",
+				"app/controllers/application_controller.rb"
 			],
 			[
 				"applicat",
@@ -520,14 +626,6 @@
 			[
 				"login",
 				"app/assets/javascripts/login.js"
-			],
-			[
-				"app",
-				"app/controllers/application_controller.rb"
-			],
-			[
-				"route",
-				"config/routes.rb"
 			],
 			[
 				"rou",
@@ -590,16 +688,8 @@
 				"script/rails"
 			],
 			[
-				"config",
-				"config.ru"
-			],
-			[
 				"conf",
 				"config/application.rb"
-			],
-			[
-				"rout",
-				"config/routes.rb"
 			],
 			[
 				"r",
@@ -668,6 +758,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 60.0,
+	"side_bar_width": 130.0,
 	"status_bar_visible": true
 }
