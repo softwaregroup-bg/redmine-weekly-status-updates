@@ -294,14 +294,16 @@ function initPage(params){
             },
             parse:function(data) {
                 var test = [];
-                jQuery.each(data.response.issues, function(index, val) {
-                    test.push({
-                        "id":val.id,
-                        "subject":val.subject,
-                        "project_id":val.project.id,
-                        "description":val.description
+                if(data.response.issues){
+                    jQuery.each(data.response.issues, function(index, val) {
+                        test.push({
+                            "id":val.id,
+                            "subject":val.subject,
+                            "project_id":val.project.id,
+                            "description":val.description
+                        });
                     });
-                });
+                }
                 updateProcessCounter();
                 return test;
             }
