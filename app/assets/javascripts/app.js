@@ -265,6 +265,7 @@ function initPage(params){
             },
             updateModel:function(a,b,c) {
                 this.model.update({"attributes":{"description":this.$('textarea').get(0).value}});
+                updateProcessCounter();
             },
             editIssueView:function(a,b,c) {
                 alert('edit window');
