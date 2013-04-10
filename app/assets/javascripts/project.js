@@ -1,6 +1,6 @@
 define(
-    ['jquery','underscore','backbone'],
-    function($, _, Backbone){
+    ['jquery','underscore','backbone', 'issue'],
+    function($, _, Backbone, Issue){
         var jQuery = $;
         var Project = {
             "model":Backbone.Model.extend({

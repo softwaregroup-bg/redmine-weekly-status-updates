@@ -48,7 +48,6 @@ define(
                         "weeklyStatusUpdate/:id": "weeklyStatusUpdate",
                     },
                     weeklyStatusUpdate: function (query, page){
-                        debugger;
                         pageObject.onEventWeeklyStatusUpdate();
                         //add heading
                         $('#app-pane .mpane-main:last children').remove();

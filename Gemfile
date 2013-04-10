@@ -17,3 +17,6 @@ end
 
 gem 'jquery-rails'
 gem 'unicorn'
+
+
+#rake assets:precompile:all

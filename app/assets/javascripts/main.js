@@ -1,8 +1,15 @@
 requirejs.config({
     "shim":{
         'backbone': {
-            deps: ['underscore', 'jquery'],
+            deps: ['underscore','jquery','bootstrap.min'],
             exports: 'Backbone'
+        },
+        'appInit':{
+            deps: ['backbone']
+        },
+        'underscore':{
+            deps: ['jquery'],
+            exports: '_'
         }
     }
 });
