@@ -49,26 +49,24 @@ class HomeController < ApplicationController
         print self.trackerId
         self.reqRes('/issues.json?offset=0&include=journals&limit=2&sort=created_on:desc&tracker_id=' + self.trackerId.to_s + '&project_id=' + params[:id],self.username,self.password,'', 'render')
     end
-    def projectIssuesUpdate
 
-        params["home"]["id"] = params["home"]["iid"]
-        paramsNew = {}
-        
-        params["home"].each do |x,v|
-            if x != 'iid' and x != 'id'
-                paramsNew[x] = v
-            end
-        end
-
-        issueParam = {}
-
-        issueParam['issue'] = paramsNew
-
+    def issuesUpdate
+        updateParams = {}
+        updateParams['issue'] = params['home']
         print "\n--\n"
-        puts issueParam
+        puts updateParams
         print "\n--\n"
 
-        self.resReq('/issues/' + params["iid"].to_s + '.json','put',issueParam)
+        self.resReq('/issues/' + params['home']['id'].to_s + '.json','put',updateParams)
+    end
+
+    def issueAdd
+        addParams = {}
+        addParams['issue'] = params['home']
+        print "\n--\n"
+        puts addParams
+        print "\n--\n"
+        self.resReq('/issues.json','post',addParams)
     end
 
     def projectIssuesAdd
@@ -94,5 +92,9 @@ class HomeController < ApplicationController
 
     def issues
         self.reqRes('/issues.json?include=journals&sort=created_on:desc&tracker_id=' + self.trackerId.to_s,self.username,self.password, '', 'render')
+    end
+
+    def tmpout
+        render :json => '{"errorCode":"0","errorMessage":"OK","response":1}', :content_type => "application/json"
     end
 end
