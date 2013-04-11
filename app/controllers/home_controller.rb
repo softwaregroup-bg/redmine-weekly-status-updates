@@ -71,6 +71,16 @@ class HomeController < ApplicationController
         self.resReq('/issues/' + params["iid"].to_s + '.json','put',issueParam)
     end
 
+    def issuesUpdate
+        updateParams = {}
+        updateParams['issue'] = params['home']
+        print "\n--\n"
+        puts updateParams
+        print "\n--\n"
+
+        self.resReq('/issues/' + params['home']['id'].to_s + '.json','put',updateParams)
+    end
+
     def projectIssuesAdd
         params["home"]["id"] = params["home"]["iid"]
         paramsNew = {}
@@ -94,5 +104,9 @@ class HomeController < ApplicationController
 
     def issues
         self.reqRes('/issues.json?include=journals&sort=created_on:desc&tracker_id=' + self.trackerId.to_s,self.username,self.password, '', 'render')
+    end
+
+    def tmpout
+        render :json => '{"errorCode":"0","errorMessage":"OK","response":1}', :content_type => "application/json"
     end
 end
