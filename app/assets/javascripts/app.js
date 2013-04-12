@@ -275,6 +275,8 @@ function initPage(params){
             },
             updateView:function () {
                 // model was changed, update the view
+                var _id = this.model.attributes.response.issue.id;
+                this.$el.find('a').attr('href',this.$el.find('a').attr('href').replace('undefined',_id));
             },
             destroy: function() {
                 this.unbind();

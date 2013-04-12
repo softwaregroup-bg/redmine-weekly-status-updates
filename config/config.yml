@@ -1,5 +1,6 @@
 production:
-    host: 'support.softwaregroup-bg.com'
+    #host: 'support.softwaregroup-bg.com'
+    host: '192.168.10.227'
     port: '443'
     communication: 'https'
     tracker: "Status update"
