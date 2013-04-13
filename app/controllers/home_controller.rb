@@ -15,7 +15,7 @@ class HomeController < ApplicationController
         end
     end
     def doLogin
-        self.reqRes('/users/current.json',params[:username],params[:password],'', 'render')
+        ret_ = self.reqRes('/users/current.json',params[:username],params[:password],'', 'render')
         if self.username
             json = self.reqRes('/trackers.json',self.username,self.password,'',nil)
 
@@ -27,7 +27,9 @@ class HomeController < ApplicationController
                     hc.trackerId = hash["id"]
                 end
             end
+            ret_json_ = ActiveSupport::JSON.decode(ret_)
         end
+        render :json => ret_, :content_type => "application/json"
     end
     def user
         self.reqRes('/users/current.json',self.username,self.password,'', 'render')
