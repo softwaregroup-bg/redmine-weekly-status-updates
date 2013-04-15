@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ### BEGIN INIT INFO
 # Required-Start: $all
 # Required-Stop: $network $local_fs $syslog
@@ -7,10 +6,6 @@
 # Default-Stop: 0 1 6
 # Short-Description: Start the APPLICATION unicorns at boot
 ### END INIT INFO
-
-set -u
-set -e
-
 # Change these to match your app:
 APP_ROOT="/opt/redmine-weekly-status-updates"
 PID="$APP_ROOT/tmp/pids/unicorn.pid"
@@ -65,3 +60,4 @@ case ${1-help} in
  exit 1
  ;;
 esac
+
