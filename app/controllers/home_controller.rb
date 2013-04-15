@@ -15,7 +15,7 @@ class HomeController < ApplicationController
         end
     end
     def doLogin
-        self.reqRes('/users/current.json',params[:username],params[:password],'', 'render')
+        li_ = self.reqRes('/users/current.json',params[:username],params[:password],'', 'norender')
         if self.username
             json = self.reqRes('/trackers.json',self.username,self.password,'',nil)
 
@@ -26,6 +26,12 @@ class HomeController < ApplicationController
                 if hash["name"] == self.tracker
                     hc.trackerId = hash["id"]
                 end
+            end
+            if !self.respond_to?('trackerId')
+                session.destroy()
+                render :json => '{"url":"","errorCode":"3","httpErrorCode":"","errorMessage":"missing tracker","response":"false","append":""}', :content_type => "application/json"
+            else
+                render :json => li_, :content_type => "application/json"
             end
         end
     end
@@ -95,6 +101,6 @@ class HomeController < ApplicationController
     end
 
     def tmpout
-        render :json => '{"errorCode":"0","errorMessage":"OK","response":1}', :content_type => "application/json"
+        render :json => '{"errorCode":"1","errorMessage":"OK","response":1}', :content_type => "application/json"
     end
 end

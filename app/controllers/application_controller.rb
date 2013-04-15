@@ -28,14 +28,18 @@ class ApplicationController < ActionController::Base
                 if(response.code == '200')
                     self.username = user
                     self.password = password
-                    if toRender != nil
+                    if toRender != nil && toRender == 'render'
                         render :json => '{"url":"' + self.baseUrl + shortUrl + '","errorCode":"0","errorMessage":"OK","response":' + response.body + ',"append":"' + append + '"}', :content_type => "application/json"
+                    elsif toRender != nil && toRender == 'norender'
+                        '{"url":"' + self.baseUrl + shortUrl + '","errorCode":"0","errorMessage":"OK","response":' + response.body + ',"append":"' + append + '"}'
                     else
                         response.body
                     end
                 else
-                    if toRender != nil
+                    if toRender != nil && toRender == 'render'
                         render :json => '{"url":"' + self.baseUrl + shortUrl + '","errorCode":"1","httpErrorCode":' + response.code + ',"errorMessage":"Wrong User|Password","response":"false","append":"' + append + '"}', :content_type => "application/json"
+                    elsif toRender != nil && toRender == 'norender'
+                        '{"url":"' + self.baseUrl + shortUrl + '","errorCode":"1","httpErrorCode":' + response.code + ',"errorMessage":"Wrong User|Password","response":"false","append":"' + append + '"}'
                     else
                         response.body
                     end
