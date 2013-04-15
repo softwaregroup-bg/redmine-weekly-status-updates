@@ -249,8 +249,12 @@ function initPage(params){
             initialize: function(){
                 this.model.bind('change',this.updateView, this);
             },
-            render: function() {
-                this.options.htmlRoot.append(this.el);
+            render: function(args) {
+                if(!args)
+                    this.options.htmlRoot.append(this.el);
+                else
+                    this.options.htmlRoot.prepend(this.el);
+
                 this.$el.html(_.template($("#issue-part").html(), {
                     "name":this.model.attributes.subject,
                     "id":this.model.id,
@@ -338,7 +342,7 @@ function initPage(params){
                 this.views[m.cid] = new Issue.view({
                     model:m,
                     htmlRoot:self.$el
-                }).render();
+                }).render('new');
             }
         })
     };

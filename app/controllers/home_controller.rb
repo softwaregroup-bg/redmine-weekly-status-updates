@@ -16,27 +16,33 @@ class HomeController < ApplicationController
     end
     def doLogin
         li_ = self.reqRes('/users/current.json',params[:username],params[:password],'', 'norender')
-        if self.username
-            json = self.reqRes('/trackers.json',self.username,self.password,'',nil)
+        parsed_json_li_ = ActiveSupport::JSON.decode(li_)
+        if parsed_json_li_['errorCode'].to_i > 0
+            render :json => li_, :content_type => "application/json"
+        else
+            if self.username
+                json = self.reqRes('/trackers.json',self.username,self.password,'',nil)
 
-            parsed_json = ActiveSupport::JSON.decode(json)
-            hc = self
+                parsed_json = ActiveSupport::JSON.decode(json)
+                hc = self
 
-            parsed_json["trackers"].each do |hash|
-                if hash["name"] == self.tracker
-                    hc.trackerId = hash["id"]
+                parsed_json["trackers"].each do |hash|
+                    if hash["name"] == self.tracker
+                        hc.trackerId = hash["id"]
+                    end
                 end
-            end
-		puts "\n----\n"
-		puts hc.trackerId
-		puts "\n----\n"
-            if !self.respond_to?('trackerId')
-                session.destroy()
-                render :json => '{"url":"","errorCode":"3","httpErrorCode":"","errorMessage":"missing tracker","response":"false","append":""}', :content_type => "application/json"
-            else
-                render :json => li_, :content_type => "application/json"
+                if !self.respond_to?('trackerId')
+                    puts "123"
+                    session.destroy()
+                    render :json => '{"url":"","errorCode":"3","httpErrorCode":"","errorMessage":"missing tracker","response":"false","append":""}', :content_type => "application/json"
+                else
+                    puts "456"
+                    render :json => li_, :content_type => "application/json"
+                end
+                puts "789"
             end
         end
+        
     end
     def user
         self.reqRes('/users/current.json',self.username,self.password,'', 'render')
