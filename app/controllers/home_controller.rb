@@ -27,6 +27,9 @@ class HomeController < ApplicationController
                     hc.trackerId = hash["id"]
                 end
             end
+		puts "\n----\n"
+		puts hc.trackerId
+		puts "\n----\n"
             if !self.respond_to?('trackerId')
                 session.destroy()
                 render :json => '{"url":"","errorCode":"3","httpErrorCode":"","errorMessage":"missing tracker","response":"false","append":""}', :content_type => "application/json"
@@ -69,6 +72,7 @@ class HomeController < ApplicationController
     def issueAdd
         addParams = {}
         addParams['issue'] = params['home']
+	addParams['issue']['tracker_id'] = self.trackerId
         print "\n--\n"
         puts addParams
         print "\n--\n"
