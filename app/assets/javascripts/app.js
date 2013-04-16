@@ -77,15 +77,28 @@ function initPage(params){
                 data: {},
                 success: function(data, textStatus, xhr) {
                     var projects = data.response.projects;
-                    var parentList = {};
+                    var parentList = {}
+                        parentListR = {};
                     jQuery.each(projects, function(index, val) {
-                        if(val.parent)
+                        if(val.parent){
                             parentList[val.parent.id] = val.id;
+                            parentListR[val.id]       = val.parent.id;
+                        }
                     });
                     jQuery.each(projects, function(index, val) {
+                        var l_ = 1;
+                        var parentElement;
                         if(parentList[val.id]){
-                            var p = jQuery('<li><a href="#weeklyStatusUpdate/' + val.id + '">' + val.name + '</a></li>');
-                            where.append(p);
+                            if(parentListR[val.id]){//calc level
+                                parentElement = jQuery('#rootid_' + parentListR[val.id]);
+                                l_ = parseInt(parentElement.attr('class').replace(/level_/ig,''))+1;
+                            }
+                            var p = jQuery('<li id="rootid_'+ val.id +'" class="projects level_'+l_+'"><a href="#weeklyStatusUpdate/' + val.id + '">' + val.name + '</a></li>');
+                            if(l_ > 1 && parentElement){
+                                parentElement.after(p);
+                            } else {
+                                where.append(p);
+                            }
                         }
                     });
                     updateProcessCounter();

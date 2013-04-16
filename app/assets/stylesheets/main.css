@@ -61,3 +61,13 @@ ul{list-style: none;}
 }
 #messages-pane .row-fluid.show-grid.progress_holder .span12{position: absolute;top: 0;height: 100%;z-index: 999;}
 #messages-pane .row-fluid.show-grid.progress_holder .span12{text-align: center;}
+.project-selector .level_1{padding-left: 10px;}
+.project-selector .level_2{padding-left: 20px;}
+.project-selector .level_3{padding-left: 30px;}
+.project-selector .level_4{padding-left: 40px;}
+.project-selector .level_5{padding-left: 50px;}
+.project-selector .level_6{padding-left: 60px;}
+.project-selector .level_7{padding-left: 70px;}
+.project-selector .level_8{padding-left: 80px;}
+.project-selector .level_9{padding-left: 90px;}
+.project-selector .level_10{padding-left: 100px;}
