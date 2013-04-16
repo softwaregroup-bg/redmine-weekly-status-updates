@@ -1,8 +1,8 @@
 <script type="text/javascript">
     var isAutorised = <%= @authorised %>;
 </script>
-<script type="text/template" id="login-template">
-    <div class="form-signin">
+<script type="text/template" id="login-template" onsubmit="return false;">
+    <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <div class="control-group">
             <input type="text" class="input-block-level required" placeholder="Username" name="username"/>
@@ -14,7 +14,7 @@
             <input type="checkbox" value="remember-me"> Remember me
         </label> -->
         <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-    </div>
+    </form>
 </script>
 <script type="text/template" id="msgs-alert">
     <div class="alert">
