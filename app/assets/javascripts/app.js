@@ -124,7 +124,6 @@ function initPage(params){
                 "IssueCollection":null,
                 "created_on": "",
                 "description": "",
-                "id": "",
                 "identifier": "",
                 "name": "",
                 "updated_on": ""
@@ -136,7 +135,7 @@ function initPage(params){
             },
             render: function() {
                 $('#app-pane .mpane-main:last').append(this.el);//append container to end of list of elements
-                this.$el.html(_.template($("#projects-heading").html(), {"name":this.model.attributes.name,"pid":this.model.attributes.id,"issues":'', "class_xtra":"project-body"}));
+                this.$el.html(_.template($("#projects-heading").html(), {"name":this.model.attributes.name,"description":this.model.attributes.description,"pid":this.model.attributes.id,"issues":'', "class_xtra":"project-body"}));
                 return this;
             },
             events:{
@@ -247,6 +246,8 @@ function initPage(params){
                 if(up.attributes){
                     if(up.attributes.description)
                         this.attributes.description = up.attributes.description;
+                    if(up.attributes.subject)
+                        this.attributes.subject = up.attributes.subject;
                 }
                 var callBack = {};
                 if(this.isNew()){
@@ -280,8 +281,12 @@ function initPage(params){
                 "click .icon-trash":"deleteIssueView",
                 "click .btn":"updateModel",
             },
-            updateModel:function(a,b,c) {
-                this.model.update({"attributes":{"description":this.$('textarea').get(0).value}});
+            updateModel:function() {
+                var values = {"attributes":{
+                    "description":this.$('textarea').get(0).value,
+                    "subject":this.$('input').get(0).value
+                }};
+                this.model.update(values);
                 updateProcessCounter();
             },
             editIssueView:function(a,b,c) {
@@ -292,8 +297,14 @@ function initPage(params){
             },
             updateView:function () {
                 // model was changed, update the view
-                var _id = this.model.attributes.response.issue.id;
-                this.$el.find('a').attr('href',this.$el.find('a').attr('href').replace('undefined',_id));
+                if(this.model.isNew() && (this.model.attributes.response) && (this.model.attributes.response.issue)){
+                    var _id = this.model.attributes.response.issue.id;
+                    this.$el.find('a').attr('href',this.$el.find('a').attr('href').replace('undefined',_id));
+                    this.$el.parent().children().last().remove();
+                }
+            },
+            saved:function(){
+                debugger;
             },
             destroy: function() {
                 this.unbind();
@@ -310,15 +321,14 @@ function initPage(params){
             },
             "url":function(){
                 updateProcessCounter('+');
-                return '/issues'
-                // return '/project/' + this.fetchParams.projectId + '/issues'
+                return '/issues';
             },
             parse:function(data) {
                 var test = [],
                     self = this;
                 if(data.response.issues){
                     jQuery.each(data.response.issues, function(index, val) {
-                        if((val.project.id == self.fetchParams.projectId) && (test.length < 2)){//if project id is the same as requested and total isses are < 2 per project
+                        if((val.project.id == self.fetchParams.projectId) && (test.length < 3)){//if project id is the same as requested and total isses are < 2 per project
                             test.push({
                                 "id":val.id,
                                 "subject":val.subject,

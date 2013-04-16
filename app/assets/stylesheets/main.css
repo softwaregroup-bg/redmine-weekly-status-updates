@@ -41,7 +41,9 @@ body{
 }
 .nav-piece{padding: 0 10px;}
 .navbar-inner.project-body{margin-bottom: 2px;}
-.navbar-projects a{cursor: pointer;color: #fff;}
+.navbar-projects a{color: #fff;}
+a{cursor: pointer;}
+a:visited{color: #08c;}
 ul{list-style: none;}
 .show-grid [class*="span"] {
     background-color: #dadddd;

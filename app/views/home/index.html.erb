@@ -2,7 +2,7 @@
     var isAutorised = <%= @authorised %>;
 </script>
 <script type="text/template" id="login-template" onsubmit="return false;">
-    <form class="form-signin">
+    <form class="form-signin" onsubmit="return false;">
         <h2 class="form-signin-heading">Please sign in</h2>
         <div class="control-group">
             <input type="text" class="input-block-level required" placeholder="Username" name="username"/>
@@ -37,7 +37,8 @@
 <script type="text/template" id="projects-heading">
     <div class="row-fluid show-grid <%%= class_xtra %>" id="prjid_<%%= pid %>">
         <div class="span12">
-            <h4><%%= name %><a class="icon-plus new-issue"></a></h4>
+            <h4><a href="<%= @redmine_base_url %>/projects/<%%= name %>" target="_blank"><%%= name %></a>&nbsp;<a class="icon-plus new-issue"></a></h4>
+            <span class="label"><%%= description %></span>
             <ul class="row-fluid show-grid">
                 <li>
                     <div class="issues"><%%= issues %></div>
@@ -48,9 +49,8 @@
 </script>
 <script type="text/template" id="issue-part">
     <div class="span4">
-        <a href="<%= @redmine_base_url %>/issues/<%%= id %>" target="_blank">
-            <%%= name %>
-        </a>
+        <input type="text" value="<%%= name %>" class="span10"/>
+        <a href="<%= @redmine_base_url %>/issues/<%%= id %>" target="_blank" class="icon-random"></a>
         <div>
             <textarea rows="3"><%%= description %></textarea>
             <div>
