@@ -182,13 +182,14 @@ function initPage(params){
                             }
                         });
                     } else {
-                        //some error loging
+                        //NOTE: some error loging
                     }
                     return memberships;
                 }
             }),
             "view":Backbone.View.extend({
                 "initialize":function(){
+                    //NOTE: may be
                     this.render();
                 },
                 "render":function() {
