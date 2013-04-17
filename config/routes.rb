@@ -9,4 +9,5 @@ Test1::Application.routes.draw do
     match '/issues' => 'home#issueAdd', :via => :post
     match '/project/:id/issues' => 'home#projectIssues', :via => :get
     match '/project/:id/issues' => 'home#projectIssuesAdd', :via => :post
+    match '/projects/:name/memberships' => 'home#projectMembership', :via => :get
 end

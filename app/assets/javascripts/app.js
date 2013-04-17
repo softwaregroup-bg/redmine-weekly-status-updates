@@ -134,8 +134,16 @@ function initPage(params){
                 this.model.bind('change',this.updateView, this);
             },
             render: function() {
+                var self = this;
                 $('#app-pane .mpane-main:last').append(this.el);//append container to end of list of elements
+                var pmm = new Project.membership.model({"project":{"name":this.model.get('name'),"id":this.model.get('id')}});
+                pmm.fetch();
                 this.$el.html(_.template($("#projects-heading").html(), {"name":this.model.attributes.name,"description":this.model.attributes.description,"pid":this.model.attributes.id,"issues":'', "class_xtra":"project-body"}));
+                new Project.membership.view({
+                    model:pmm,
+                    htmlRoot:self.$('.mms-info')
+                }).render();
+
                 return this;
             },
             events:{
@@ -153,7 +161,43 @@ function initPage(params){
                 this.unbind();
                 this.remove();
             }
-        })
+        }),
+        "membership":{
+            "model":Backbone.Model.extend({
+                "defaults":{},
+                "url":function(){
+                    return '/projects/' + this.get('project').name + '/memberships';
+                },
+                "parse":function(data,b,c) {
+                    var memberships = [];
+                    var model = this;
+                    if(data.response && (typeof(data.response) == 'object')){
+                        jQuery.each(data.response.memberships, function(index, val) {
+                            if(model.get('project').id == val.project.id){
+                                memberships.push({
+                                    "user":val.user,
+                                    "roles":val.roles,
+                                    "group":val.group
+                                });
+                            }
+                        });
+                    } else {
+                        //some error loging
+                    }
+                    return memberships;
+                }
+            }),
+            "view":Backbone.View.extend({
+                "initialize":function(){
+                    this.render();
+                },
+                "render":function() {
+                    /*
+                    TODO: develope view
+                    */
+                }
+            })
+        }
     };
 
     var ProjectCollection = {
@@ -304,7 +348,6 @@ function initPage(params){
                 }
             },
             saved:function(){
-                debugger;
             },
             destroy: function() {
                 this.unbind();

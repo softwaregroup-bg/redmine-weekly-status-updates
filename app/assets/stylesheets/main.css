@@ -60,6 +60,10 @@ ul{list-style: none;}
 .show-grid [class*="span"] [class*="span"] {
     background-color: #ccc;
     margin-right: 2px;
+    padding-top: 2px;
+}
+.show-grid [class*="span"] [class*="span"] [class*="span"] {
+    background-color: #fff;
 }
 #messages-pane .row-fluid.show-grid.progress_holder .span12{position: absolute;top: 0;height: 100%;z-index: 999;}
 #messages-pane .row-fluid.show-grid.progress_holder .span12{text-align: center;}

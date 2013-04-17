@@ -32,14 +32,11 @@ class HomeController < ApplicationController
                     end
                 end
                 if !self.respond_to?('trackerId')
-                    puts "123"
                     session.destroy()
                     render :json => '{"url":"","errorCode":"3","httpErrorCode":"","errorMessage":"missing tracker","response":"false","append":""}', :content_type => "application/json"
                 else
-                    puts "456"
                     render :json => li_, :content_type => "application/json"
                 end
-                puts "789"
             end
         end
         
@@ -110,7 +107,12 @@ class HomeController < ApplicationController
         self.reqRes('/issues.json?include=journals&sort=created_on:desc&tracker_id=' + self.trackerId.to_s,self.username,self.password, '', 'render')
     end
 
+    def projectMembership
+        self.reqRes('/projects/' + params[:name] + '/memberships.json',self.username,self.password,'', 'render')
+    end
+
     def tmpout
         render :json => '{"errorCode":"1","errorMessage":"OK","response":1}', :content_type => "application/json"
     end
+
 end
