@@ -108,7 +108,7 @@ class HomeController < ApplicationController
     end
 
     def projectMembership
-        self.reqRes('/projects/' + params[:name] + '/memberships.json',self.username,self.password,'', 'render')
+        self.reqRes(URI.encode('/projects/' + params[:name] + '/memberships.json'),self.username,self.password,'', 'render')
     end
 
     def tmpout
