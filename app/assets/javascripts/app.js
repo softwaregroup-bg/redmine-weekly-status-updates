@@ -184,18 +184,33 @@ function initPage(params){
                     } else {
                         //NOTE: some error loging
                     }
-                    return memberships;
+                    return {"memberships":memberships,"project":this.attributes.project};
                 }
             }),
             "view":Backbone.View.extend({
                 "initialize":function(){
-                    //NOTE: may be
+                    this.model.bind('change', this.render, this);
                     this.render();
                 },
                 "render":function() {
-                    /*
-                    TODO: develope view
-                    */
+                    if(this.model.get('memberships')){
+                        if(this.model.get('memberships').length>0){
+                            var users = [];
+                            jQuery.each(this.model.get('memberships'), function(index, val) {
+                                if(val.user)
+                                    users.push(val.user.name);
+                            });
+                            this.$('.users').text('Users: ' + users.join(', '));
+                        } else {
+                            this.$('.users').remove();
+                        }
+                    } else {
+                        this.setElement(this.options.htmlRoot);
+                    }
+                },
+                destroy: function() {
+                    this.unbind();
+                    this.remove();
                 }
             })
         }
@@ -345,7 +360,8 @@ function initPage(params){
                 if(this.model.isNew() && (this.model.attributes.response) && (this.model.attributes.response.issue)){
                     var _id = this.model.attributes.response.issue.id;
                     this.$el.find('a').attr('href',this.$el.find('a').attr('href').replace('undefined',_id));
-                    this.$el.parent().children().last().remove();
+                    if(this.$el.parent().children().length>3)
+                        this.$el.parent().children().last().remove();
                 }
             },
             saved:function(){
