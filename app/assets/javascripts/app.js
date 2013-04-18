@@ -136,7 +136,7 @@ function initPage(params){
             render: function() {
                 var self = this;
                 $('#app-pane .mpane-main:last').append(this.el);//append container to end of list of elements
-                var pmm = new Project.membership.model({"project":{"name":this.model.get('name'),"id":this.model.get('id')}});
+                var pmm = new Project.membership.model({"project":{"name":this.model.get('name'),"identifier":this.model.get('identifier'),"id":this.model.get('id')}});
                 pmm.fetch();
                 this.$el.html(_.template($("#projects-heading").html(), {"name":this.model.attributes.name,"description":this.model.attributes.description,"pid":this.model.attributes.id,"issues":'', "class_xtra":"project-body"}));
                 new Project.membership.view({
@@ -166,7 +166,7 @@ function initPage(params){
             "model":Backbone.Model.extend({
                 "defaults":{},
                 "url":function(){
-                    return '/projects/' + this.get('project').name + '/memberships';
+                    return '/projects/' + this.get('project').identifier + '/memberships';
                 },
                 "parse":function(data,b,c) {
                     var memberships = [];
