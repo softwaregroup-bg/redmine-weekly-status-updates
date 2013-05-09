@@ -51,10 +51,26 @@ class HomeController < ApplicationController
 
     def projects
         if params[:ownerID]
-            self.reqRes('/projects.json',self.username,self.password, params[:ownerID], 'render')
+            self.allProjects(params[:ownerID])
         else
-            self.reqRes('/projects.json',self.username,self.password,'', 'render')
+            self.allProjects('')
         end
+    end
+
+    def allProjects(ownerID)
+        limit = 100
+        offset = 0
+        url_ = '/projects.json?limit=' + limit.to_s + '&offset='
+        projects = ActiveSupport::JSON.decode(self.reqRes(url_ + offset.to_s,self.username,self.password, ownerID, 'norender'))
+        if(projects['response']['total_count']>projects['response']['projects'].length)
+            times_ = (projects['response']['total_count'].to_f/limit).ceil-1
+            times_.times do |i|
+                offset = ((i+1)*limit)
+                tmp_ = self.reqRes(url_ + offset.to_s,self.username,self.password, ownerID, 'norenderclean')
+                projects['response']['projects'].concat(ActiveSupport::JSON.decode(tmp_)['projects'])
+            end
+        end
+        render :json => projects
     end
 
     def projectIssues
