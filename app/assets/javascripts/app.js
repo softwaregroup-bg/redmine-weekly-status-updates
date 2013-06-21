@@ -76,31 +76,51 @@ function initPage(params){
                 dataType: 'json',
                 data: {},
                 success: function(data, textStatus, xhr) {
-                    var projects = data.response.projects;
-                    var parentList = {}
-                        parentListR = {};
-                    jQuery.each(projects, function(index, val) {
-                        if(val.parent){
-                            parentList[val.parent.id] = val.id;
-                            parentListR[val.id]       = val.parent.id;
+                    var indexesProjectList = data.response.projects,
+                    kvProjectList = {},
+                    pe = {};
+
+                    jQuery.each(indexesProjectList, function(index, val) {
+                        if(val){
+                            kvProjectList[val.id] = val;
+                            kvProjectList[val.id]['i'] = index;
                         }
                     });
-                    jQuery.each(projects, function(index, val) {
-                        var l_ = 1;
-                        var parentElement;
-                        if(parentList[val.id]){
-                            if(parentListR[val.id]){//calc level
-                                parentElement = jQuery('#rootid_' + parentListR[val.id]);
-                                l_ = parseInt(parentElement.attr('class').replace(/level_/ig,''))+1;
-                            }
-                            var p = jQuery('<li id="rootid_'+ val.id +'" class="projects level_'+l_+'"><a href="#weeklyStatusUpdate/' + val.id + '">' + val.name + '</a></li>');
-                            if(l_ > 1 && parentElement){
-                                parentElement.after(p);
-                            } else {
+
+                    var pp = function(o, added) {
+                        if(o.parent){//if project
+                            if(!pe[o.parent.id]){
+                                pe[o.parent.id] = o.parent.id;
+                                var p = (jQuery('<div/>').html(_.template($("#project-menu-part").html(), o.parent))).children();
+
+                                if(kvProjectList[o.parent.id].parent)
+                                    p.attr('id',p.attr('id') + ' ' + kvProjectList[o.parent.id].parent.id);
+
                                 where.append(p);
+                                return pp(kvProjectList[o.parent.id],true);
                             }
                         }
+                    };
+
+                    jQuery.each(indexesProjectList, function(index, val) {
+                        pp(val);
                     });
+
+                    jQuery.each(where.find('.projects'), function(index, val) {
+                        var v = jQuery(val);
+                        var ids = v.attr('id').split(' ');
+                        if(ids.length>1){
+                            var parentIdEl = where.find('#rootid_' + ids[1]);
+                            if(parentIdEl.find('ul').length == 0){
+                                parentIdEl.append('<ul class="dropdown-menu"/>');
+                                parentIdEl.addClass('dropdown-submenu');
+                            }
+                            v.attr('id',ids[0]);
+                            var ne = jQuery('<div/>').append((jQuery('<div/>').append(v)).html()).children();
+                            parentIdEl.find('ul').append(ne);
+                        }
+                    });
+
                     updateProcessCounter();
                 },
                 error: function(xhr, textStatus, errorThrown) {
