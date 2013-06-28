@@ -340,6 +340,7 @@ function initPage(params){
         }),
         "view":Backbone.View.extend({
             tagName:'li',
+            className:'span4',
             initialize: function(){
                 this.model.bind('change',this.updateView, this);
             },
@@ -425,6 +426,7 @@ function initPage(params){
         "view":Backbone.View.extend({
             views:{},
             "tagName":"ul",
+            className:"row-fluid show-grid",
             initialize : function() {
                 this.collection.bind('reset', this.render, this);
                 this.collection.bind('add', this.added, this);
